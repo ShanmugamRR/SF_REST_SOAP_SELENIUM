@@ -82,5 +82,17 @@ public class API_Utilities
 		return httpGet;
 	}
 
+	public String replaceString(String value)
+	{
+		String result = value.replace(" ", "+");
+		return result;
+	}
+	
+	public String getID(String url, String query)
+	{
+		String baseurl = url +"/query?q="+ query;
+		return baseurl;
+		
+	}
 
 }

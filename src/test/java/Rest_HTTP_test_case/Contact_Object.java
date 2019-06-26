@@ -28,6 +28,7 @@ public class Contact_Object implements API_Variables
 	static String ContactFirstName = "Test_API";
 	static String ContactLastName = "REST_API";
 	static String ContactTitle = "Shanmugam_TEST";
+	static String query = "Select id from contact where title ="+ContactTitle;
 
 	API_Utilities HTTP = new API_Utilities();
 
@@ -96,7 +97,10 @@ public class Contact_Object implements API_Variables
 @Test
 public void Update_ContactObjects()
 {
-	
+	String query_c = HTTP.replaceString(query);
+	System.out.println(query_c);
+	ContactId=HTTP.getID(baseUrl, query_c);
+	System.out.println(ContactId);
 }
 }
 

@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Rest_HTTP_test_case.Contact_Object" duration-ms="14495" started-at="2019-06-26T19:22:23Z" finished-at="2019-06-26T19:22:37Z">
+  <suite name="Rest_HTTP_test_case.Contact_Object" duration-ms="4640" started-at="2019-06-26T21:45:44Z" finished-at="2019-06-26T21:45:48Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="14495" started-at="2019-06-26T19:22:23Z" finished-at="2019-06-26T19:22:37Z">
+    <test name="Command line test" duration-ms="4640" started-at="2019-06-26T21:45:44Z" finished-at="2019-06-26T21:45:48Z">
       <class name="Rest_HTTP_test_case.Contact_Object">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@21bcffb5]" name="getConnection" is-config="true" duration-ms="10783" started-at="2019-06-26T19:22:23Z" finished-at="2019-06-26T19:22:34Z">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@21bcffb5]" name="getConnection" is-config="true" duration-ms="2432" started-at="2019-06-26T21:45:44Z" finished-at="2019-06-26T21:45:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="Create_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@21bcffb5]" name="Create_ContactObjects" duration-ms="3629" started-at="2019-06-26T19:22:34Z" finished-at="2019-06-26T19:22:37Z">
+        <test-method status="PASS" signature="Create_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@21bcffb5]" name="Create_ContactObjects" duration-ms="2184" started-at="2019-06-26T21:45:46Z" finished-at="2019-06-26T21:45:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Create_ContactObjects -->
-        <test-method status="PASS" signature="Update_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@21bcffb5]" name="Update_ContactObjects" duration-ms="1" started-at="2019-06-26T19:22:37Z" finished-at="2019-06-26T19:22:37Z">
+        <test-method status="PASS" signature="Update_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@21bcffb5]" name="Update_ContactObjects" duration-ms="0" started-at="2019-06-26T21:45:48Z" finished-at="2019-06-26T21:45:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Update_ContactObjects -->
