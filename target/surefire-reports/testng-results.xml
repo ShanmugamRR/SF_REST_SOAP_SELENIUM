@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Rest_HTTP_test_case.Contact_Object" duration-ms="4259" started-at="2019-06-25T22:19:19Z" finished-at="2019-06-25T22:19:23Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="4259" started-at="2019-06-25T22:19:19Z" finished-at="2019-06-25T22:19:23Z">
+      <class name="Rest_HTTP_test_case.Contact_Object">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@3d8c7aca]" name="getConnection" is-config="true" duration-ms="2282" started-at="2019-06-25T22:19:19Z" finished-at="2019-06-25T22:19:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getConnection -->
+        <test-method status="PASS" signature="Create_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@3d8c7aca]" name="Create_ContactObjects" duration-ms="1955" started-at="2019-06-25T22:19:21Z" finished-at="2019-06-25T22:19:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Create_ContactObjects -->
+      </class> <!-- Rest_HTTP_test_case.Contact_Object -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Rest_HTTP_test_case.Contact_Object -->
+</testng-results>
