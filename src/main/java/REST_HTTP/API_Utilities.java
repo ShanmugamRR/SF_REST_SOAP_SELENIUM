@@ -7,6 +7,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -49,10 +50,18 @@ public class API_Utilities
 
 
 
-	public HttpResponse getResponse(HttpPost httpPost) throws IOException, IOException 
+	public HttpResponse getResponsePost(HttpPost httpPost) throws IOException, IOException 
 	{
 		HttpClient httpClient = HttpClientBuilder.create().build();
 		HttpResponse response = httpClient.execute(httpPost);
+		return response;
+
+	}
+	
+	public HttpResponse getResponse(HttpGet httpGet) throws IOException, IOException 
+	{
+		HttpClient httpClient = HttpClientBuilder.create().build();
+		HttpResponse response = httpClient.execute(httpGet);
 		return response;
 
 	}
@@ -65,6 +74,13 @@ public class API_Utilities
 		return httpPost;
 	}
 
+	public HttpGet getHttpt(String url)
+	{
+		HttpGet httpGet = new HttpGet(url);
+		httpGet.addHeader(Header);
+		httpGet.addHeader(PrintHeader);
+		return httpGet;
+	}
 
 
 }

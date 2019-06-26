@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Rest_HTTP_test_case.Contact_Object" title="Rest_HTTP_test_case.Contact_Object" hash-for-method="Create_ContactObjects">Create_ContactObjects</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Rest_HTTP_test_case.Contact_Object" title="Rest_HTTP_test_case.Contact_Object" hash-for-method="Update_ContactObjects">Update_ContactObjects</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Rest_HTTP_test_case.Contact_Object -->
@@ -128,6 +133,13 @@
                   <a name="Create_ContactObjects">
                   </a> <!-- Create_ContactObjects -->
                   <span class="method-name">Create_ContactObjects</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Update_ContactObjects">
+                  </a> <!-- Update_ContactObjects -->
+                  <span class="method-name">Update_ContactObjects</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -183,16 +195,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Create_ContactObjects')
 data.setCell(0, 2, 'Rest_HTTP_test_case.Contact_Object')
-data.setCell(0, 3, 1955);
+data.setCell(0, 3, 3629);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Update_ContactObjects')
+data.setCell(1, 2, 'Rest_HTTP_test_case.Contact_Object')
+data.setCell(1, 3, 1);
 window.suiteTableData['Rest_HTTP_test_case.Contact_Object']= { tableData: data, tableDiv: 'times-div-Rest_HTTP_test_case.Contact_Object'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Rest_HTTP_test_case.Contact_Object">
               </div> <!-- times-div-Rest_HTTP_test_case.Contact_Object -->
             </div> <!-- times-div -->
@@ -225,7 +241,11 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">Create_ContactObjects</span>
-                <span class="method-start">2298 ms</span>
+                <span class="method-start">10824 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Update_ContactObjects</span>
+                <span class="method-start">14454 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

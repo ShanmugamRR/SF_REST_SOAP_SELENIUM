@@ -2,7 +2,6 @@ package Rest_HTTP_test_case;
 
 import java.io.IOException;
 import java.util.PriorityQueue;
-
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -26,9 +25,9 @@ public class Contact_Object implements API_Variables
 {
 	static String baseUrl;
 	static String ContactId ;
-	static String ContactFirstName;
-	static String ContactLastName;
-	static String ContactTitle;
+	static String ContactFirstName = "Test_API";
+	static String ContactLastName = "REST_API";
+	static String ContactTitle = "Shanmugam_TEST";
 
 	API_Utilities HTTP = new API_Utilities();
 
@@ -41,7 +40,7 @@ public class Contact_Object implements API_Variables
 				+ USERNAME + "&password=" + PASSWORD;
 
 		HttpPost httpPost=	HTTP.getHttpPost(loginURL);
-		HttpResponse response = HTTP.getResponse(httpPost);
+		HttpResponse response = HTTP.getResponsePost(httpPost);
 
 		int statuscode = 200;
 		System.out.println("Status code: "+HTTP.getStatusCode(response,statuscode));
@@ -78,9 +77,9 @@ public class Contact_Object implements API_Variables
 		int statuscode = 201;
 
 		JSONObject create_contact = new JSONObject();
-		create_contact.put("FirstName", "Test_API");
-		create_contact.put("LastName", "REST_API");
-		create_contact.put("Title", "Shanmugam_TEST");
+		create_contact.put("FirstName",ContactFirstName);
+		create_contact.put("LastName", ContactLastName);
+		create_contact.put("Title", ContactTitle);
 
 		HttpPost httpPost =	HTTP.getHttpPost(url);
 
@@ -88,7 +87,7 @@ public class Contact_Object implements API_Variables
 		body.setContentType("application/json");
 		httpPost.setEntity(body);
 
-		HttpResponse response = HTTP.getResponse(httpPost);
+		HttpResponse response = HTTP.getResponsePost(httpPost);
 		System.out.println("Status code: "+HTTP.getStatusCode(response,statuscode));
 
 	}
