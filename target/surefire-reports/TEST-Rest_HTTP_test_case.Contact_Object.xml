@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="Rest_HTTP_test_case.Contact_Object" time="2.189" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="Rest_HTTP_test_case.Contact_Object" time="1.871" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\bin"/>
@@ -28,7 +28,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="E:\OFFICE\TOOLS\ECLIPSE\eclipse\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4078906241421061037.tmp"/>
+    <property name="classworlds.conf" value="E:\OFFICE\TOOLS\ECLIPSE\eclipse\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5310952296406206725.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_161/bin/server;C:/Program Files/Java/jre1.8.0_161/bin;C:/Program Files/Java/jre1.8.0_161/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;%MAVEN_HOME%\bin;C:\Program Files\Java\jdk-9.0.4\bin;C:\Users\Babulu\AppData\Local\Microsoft\WindowsApps;C:\Users\Babulu\AppData\Local\GitHubDesktop\bin;C:\Program Files\Java\jdk1.8.0_161\bin;;C:\Users\Babulu\Desktop;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_161\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=Contact_Object -B clean test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=Contact_Object -B test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,6 +62,68 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Rest_HTTP_test_case.Contact_Object" name="Create_ContactObjects" time="2.189"/>
-  <testcase classname="Rest_HTTP_test_case.Contact_Object" name="Update_ContactObjects" time="0"/>
+  <testcase classname="Rest_HTTP_test_case.Contact_Object" name="Update_ContactObjects" time="1.871">
+    <failure message="JSONObject[&quot;records&quot;] not found." type="org.json.JSONException">org.json.JSONException: JSONObject[&quot;records&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:566)
+	at org.json.JSONObject.getJSONArray(JSONObject.java:760)
+	at Rest_HTTP_test_case.Contact_Object.Update_ContactObjects(Contact_Object.java:124)
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@4e515669
+Status code: 200
+_Header: Authorization: OAuth 00D2v000001V7DU!ARUAQGNJdVZ47brw7k3xIh3BweDwxo5cIBjTFkuRR3.oHlxzuh1hp9I1SDrYJPlFgXMAjKawxvzdCzSv09Q_zWCbeKbl_v0f
+
+HTTP/1.1 200 OK
+Successful login
+instance URL: https://ap15.salesforce.com
+access token/session ID: 00D2v000001V7DU!ARUAQGNJdVZ47brw7k3xIh3BweDwxo5cIBjTFkuRR3.oHlxzuh1hp9I1SDrYJPlFgXMAjKawxvzdCzSv09Q_zWCbeKbl_v0f
+baseUrl: https://ap15.salesforce.com/services/data/v45.0
+
+ ID is null. Getting ID.......
+Select+id+from+contact+where+title+=Shanmugam_TEST
+JSON result of Query:
+{
+ &quot;tooling&quot;: &quot;/services/data/v45.0/tooling&quot;,
+ &quot;metadata&quot;: &quot;/services/data/v45.0/metadata&quot;,
+ &quot;eclair&quot;: &quot;/services/data/v45.0/eclair&quot;,
+ &quot;folders&quot;: &quot;/services/data/v45.0/folders&quot;,
+ &quot;prechatForms&quot;: &quot;/services/data/v45.0/prechatForms&quot;,
+ &quot;chatter&quot;: &quot;/services/data/v45.0/chatter&quot;,
+ &quot;tabs&quot;: &quot;/services/data/v45.0/tabs&quot;,
+ &quot;appMenu&quot;: &quot;/services/data/v45.0/appMenu&quot;,
+ &quot;quickActions&quot;: &quot;/services/data/v45.0/quickActions&quot;,
+ &quot;queryAll&quot;: &quot;/services/data/v45.0/queryAll&quot;,
+ &quot;commerce&quot;: &quot;/services/data/v45.0/commerce&quot;,
+ &quot;wave&quot;: &quot;/services/data/v45.0/wave&quot;,
+ &quot;iot&quot;: &quot;/services/data/v45.0/iot&quot;,
+ &quot;analytics&quot;: &quot;/services/data/v45.0/analytics&quot;,
+ &quot;search&quot;: &quot;/services/data/v45.0/search&quot;,
+ &quot;smartdatadiscovery&quot;: &quot;/services/data/v45.0/smartdatadiscovery&quot;,
+ &quot;identity&quot;: &quot;https://login.salesforce.com/id/00D2v000001V7DUEA0/0052v00000YbbLpAAJ&quot;,
+ &quot;composite&quot;: &quot;/services/data/v45.0/composite&quot;,
+ &quot;parameterizedSearch&quot;: &quot;/services/data/v45.0/parameterizedSearch&quot;,
+ &quot;fingerprint&quot;: &quot;/services/data/v45.0/fingerprint&quot;,
+ &quot;theme&quot;: &quot;/services/data/v45.0/theme&quot;,
+ &quot;nouns&quot;: &quot;/services/data/v45.0/nouns&quot;,
+ &quot;event&quot;: &quot;/services/data/v45.0/event&quot;,
+ &quot;serviceTemplates&quot;: &quot;/services/data/v45.0/serviceTemplates&quot;,
+ &quot;recent&quot;: &quot;/services/data/v45.0/recent&quot;,
+ &quot;connect&quot;: &quot;/services/data/v45.0/connect&quot;,
+ &quot;licensing&quot;: &quot;/services/data/v45.0/licensing&quot;,
+ &quot;limits&quot;: &quot;/services/data/v45.0/limits&quot;,
+ &quot;process&quot;: &quot;/services/data/v45.0/process&quot;,
+ &quot;dedupe&quot;: &quot;/services/data/v45.0/dedupe&quot;,
+ &quot;async-queries&quot;: &quot;/services/data/v45.0/async-queries&quot;,
+ &quot;query&quot;: &quot;/services/data/v45.0/query&quot;,
+ &quot;jobs&quot;: &quot;/services/data/v45.0/jobs&quot;,
+ &quot;match&quot;: &quot;/services/data/v45.0/match&quot;,
+ &quot;emailConnect&quot;: &quot;/services/data/v45.0/emailConnect&quot;,
+ &quot;consent&quot;: &quot;/services/data/v45.0/consent&quot;,
+ &quot;compactLayouts&quot;: &quot;/services/data/v45.0/compactLayouts&quot;,
+ &quot;knowledgeManagement&quot;: &quot;/services/data/v45.0/knowledgeManagement&quot;,
+ &quot;sobjects&quot;: &quot;/services/data/v45.0/sobjects&quot;,
+ &quot;actions&quot;: &quot;/services/data/v45.0/actions&quot;,
+ &quot;support&quot;: &quot;/services/data/v45.0/support&quot;
+}
+</system-out>
+  </testcase>
 </testsuite>

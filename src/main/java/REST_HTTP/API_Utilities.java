@@ -8,11 +8,13 @@ import org.apache.http.HttpStatus;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPatch;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -22,6 +24,12 @@ public class API_Utilities
 
 	public static Header Header;
 	public static Header PrintHeader = new BasicHeader("X-PrettyPrint", "1");
+
+	//API_Utilities HTTP = new API_Utilities();
+	public API_Utilities()
+	{
+		
+	}
 
 	public int getStatusCode(HttpResponse response, int statuscode) 
 	{
@@ -57,7 +65,7 @@ public class API_Utilities
 		return response;
 
 	}
-	
+
 	public HttpResponse getResponse(HttpGet httpGet) throws IOException, IOException 
 	{
 		HttpClient httpClient = HttpClientBuilder.create().build();
@@ -74,7 +82,7 @@ public class API_Utilities
 		return httpPost;
 	}
 
-	public HttpGet getHttpt(String url)
+	public HttpGet getHttp(String url)
 	{
 		HttpGet httpGet = new HttpGet(url);
 		httpGet.addHeader(Header);
@@ -82,17 +90,29 @@ public class API_Utilities
 		return httpGet;
 	}
 
+	public HttpPatch getHttpPatch(String url)
+	{
+		HttpPatch httpPatch = new HttpPatch(url);
+		httpPatch.addHeader(Header);
+		httpPatch.addHeader(PrintHeader);
+		return httpPatch;
+	}
+
 	public String replaceString(String value)
 	{
 		String result = value.replace(" ", "+");
 		return result;
 	}
-	
-	public String getID(String url, String query)
-	{
-		String baseurl = url +"/query?q="+ query;
-		return baseurl;
-		
-	}
 
+	public static class HttpPatch extends HttpPost {
+		public HttpPatch(String url) 
+		{
+			super(url);
+		}
+
+		public String getMethod() 
+		{
+			return "PATCH";
+		}
+	}
 }

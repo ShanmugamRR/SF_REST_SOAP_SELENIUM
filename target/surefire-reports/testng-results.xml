@@ -1,21 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Rest_HTTP_test_case.Contact_Object" duration-ms="4640" started-at="2019-06-26T21:45:44Z" finished-at="2019-06-26T21:45:48Z">
+  <suite name="Rest_HTTP_test_case.Contact_Object" duration-ms="4404" started-at="2019-06-26T22:56:22Z" finished-at="2019-06-26T22:56:26Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="4640" started-at="2019-06-26T21:45:44Z" finished-at="2019-06-26T21:45:48Z">
+    <test name="Command line test" duration-ms="4404" started-at="2019-06-26T22:56:22Z" finished-at="2019-06-26T22:56:26Z">
       <class name="Rest_HTTP_test_case.Contact_Object">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@21bcffb5]" name="getConnection" is-config="true" duration-ms="2432" started-at="2019-06-26T21:45:44Z" finished-at="2019-06-26T21:45:46Z">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@13fee20c]" name="getConnection" is-config="true" duration-ms="2518" started-at="2019-06-26T22:56:22Z" finished-at="2019-06-26T22:56:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="Create_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@21bcffb5]" name="Create_ContactObjects" duration-ms="2184" started-at="2019-06-26T21:45:46Z" finished-at="2019-06-26T21:45:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Create_ContactObjects -->
-        <test-method status="PASS" signature="Update_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@21bcffb5]" name="Update_ContactObjects" duration-ms="0" started-at="2019-06-26T21:45:48Z" finished-at="2019-06-26T21:45:48Z">
+        <test-method status="FAIL" signature="Update_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@13fee20c]" name="Update_ContactObjects" duration-ms="1849" started-at="2019-06-26T22:56:24Z" finished-at="2019-06-26T22:56:26Z">
+          <exception class="org.json.JSONException">
+            <message>
+              <![CDATA[JSONObject["records"] not found.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.json.JSONException: JSONObject["records"] not found.
+at org.json.JSONObject.get(JSONObject.java:566)
+at org.json.JSONObject.getJSONArray(JSONObject.java:760)
+at Rest_HTTP_test_case.Contact_Object.Update_ContactObjects(Contact_Object.java:124)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.json.JSONException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Update_ContactObjects -->

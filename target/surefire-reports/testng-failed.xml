@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Rest_HTTP_test_case.Contact_Object]">
+  <test thread-count="5" verbose="0" name="Command line test(failed)">
+    <classes>
+      <class name="Rest_HTTP_test_case.Contact_Object">
+        <methods>
+          <include name="getConnection"/>
+          <include name="Update_ContactObjects"/>
+        </methods>
+      </class> <!-- Rest_HTTP_test_case.Contact_Object -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Rest_HTTP_test_case.Contact_Object] -->
