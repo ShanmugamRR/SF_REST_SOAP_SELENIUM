@@ -31,7 +31,7 @@ public class Contact_Object implements API_Variables
 	static String ContactFirstName = "Test_API";
 	static String ContactLastName = "REST_API";
 	static String ContactTitle = "Shanmugam_TEST";
-	static String query = "Select id from contact where title ="+ContactTitle;
+	static String query = "Select id from contact where title ='"+ContactTitle+"'";
 
 	API_Utilities HTTP = new API_Utilities();
 
@@ -106,13 +106,14 @@ System.out.println("\nCreated Successfully....");
 
 		if(ContactId == null)
 		{
+
 			System.out.println("\n ID is null. Getting ID.......");
 			String query_c = HTTP.replaceString(query);
 			System.out.println(query_c);
 			/*ContactId=HTTP.getID(baseUrl, query_c);
 	System.out.println(ContactId);*/
-
-			HttpGet httpGet = HTTP.getHttp(baseUrl);
+			String url = baseUrl+"/query?q="+query_c;
+			HttpGet httpGet = HTTP.getHttp(url);
 			HttpResponse response = HTTP.getResponse(httpGet);
 
 			int statuscode = 200;
@@ -131,13 +132,17 @@ System.out.println("\nCreated Successfully....");
 				}
 			}
 		} 
+
+
 		int statuscode = 204;
 		String url = baseUrl + "/sobjects/Contact/" + ContactId;
 		JSONObject contact = new JSONObject();
 		contact.put("LastName", "REST_API-UPDATED");
-		contact.put("MobilePhone", "90456789");
+		contact.put("MobilePhone", "9046789");
+		contact.put("Email", "shan.2408@salesforce.com");
+		//contact.put("AccountId","QE-Automation");
 
-		REST_HTTP.API_Utilities.HttpPatch httpPatch = HTTP.getHttpPatch(baseUrl);
+		REST_HTTP.API_Utilities.HttpPatch httpPatch = HTTP.getHttpPatch(url);
 		StringEntity body = new StringEntity(contact.toString(1));
 		body.setContentType("application/json");
 		httpPatch.setEntity(body);
@@ -149,8 +154,8 @@ System.out.println("\nCreated Successfully....");
 		else  {
 			System.out.println("\n Error......");
 		}
-	}
 
+	}
 }
 
 
