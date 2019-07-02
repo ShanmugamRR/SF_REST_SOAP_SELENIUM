@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Rest_HTTP_test_case.Contact_Object" duration-ms="7504" started-at="2019-07-01T21:53:17Z" finished-at="2019-07-01T21:53:25Z">
+  <suite name="Suite" duration-ms="6631" started-at="2019-07-01T23:08:56Z" finished-at="2019-07-01T23:09:03Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="7504" started-at="2019-07-01T21:53:17Z" finished-at="2019-07-01T21:53:25Z">
+    <test name="Test" duration-ms="6631" started-at="2019-07-01T23:08:56Z" finished-at="2019-07-01T23:09:03Z">
       <class name="Rest_HTTP_test_case.Contact_Object">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@13fee20c]" name="getConnection" is-config="true" duration-ms="3780" started-at="2019-07-01T21:53:17Z" finished-at="2019-07-01T21:53:21Z">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@4ccbd541]" name="getConnection" is-config="true" duration-ms="3203" started-at="2019-07-01T23:08:56Z" finished-at="2019-07-01T23:08:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="Update_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@13fee20c]" name="Update_ContactObjects" duration-ms="3709" started-at="2019-07-01T21:53:21Z" finished-at="2019-07-01T21:53:25Z">
+        <test-method status="PASS" signature="Update_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@4ccbd541]" name="Update_ContactObjects" duration-ms="3406" started-at="2019-07-01T23:09:00Z" finished-at="2019-07-01T23:09:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Update_ContactObjects -->
       </class> <!-- Rest_HTTP_test_case.Contact_Object -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Rest_HTTP_test_case.Contact_Object -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
