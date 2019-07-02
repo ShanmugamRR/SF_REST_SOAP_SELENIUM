@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: Rest_HTTP_test_case.Contact_Object
+Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.686 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.074 sec - in TestSuite

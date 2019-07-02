@@ -7,11 +7,15 @@ import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpDelete;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPatch;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -21,6 +25,12 @@ public class API_Utilities
 
 	public static Header Header;
 	public static Header PrintHeader = new BasicHeader("X-PrettyPrint", "1");
+
+	//API_Utilities HTTP = new API_Utilities();
+/*	public API_Utilities()
+	{
+		
+	}*/
 
 	public int getStatusCode(HttpResponse response, int statuscode) 
 	{
@@ -49,10 +59,25 @@ public class API_Utilities
 
 
 
-	public HttpResponse getResponse(HttpPost httpPost) throws IOException, IOException 
+	public HttpResponse getResponsePost(HttpPost httpPost) throws IOException, IOException 
 	{
 		HttpClient httpClient = HttpClientBuilder.create().build();
 		HttpResponse response = httpClient.execute(httpPost);
+		return response;
+
+	}
+	
+	public HttpResponse getResponseDelete(HttpDelete httpDelete) throws IOException
+	{
+		HttpClient httpClient = HttpClientBuilder.create().build();
+		HttpResponse response = httpClient.execute(httpDelete);
+		return response;
+	}
+
+	public HttpResponse getResponse(HttpGet httpGet) throws IOException, IOException 
+	{
+		HttpClient httpClient = HttpClientBuilder.create().build();
+		HttpResponse response = httpClient.execute(httpGet);
 		return response;
 
 	}
@@ -65,6 +90,81 @@ public class API_Utilities
 		return httpPost;
 	}
 
+	public HttpGet getHttp(String url)
+	{
+		HttpGet httpGet = new HttpGet(url);
+		httpGet.addHeader(Header);
+		httpGet.addHeader(PrintHeader);
+		return httpGet;
+	}
 
+	public HttpPatch getHttpPatch(String url)
+	{
+		HttpPatch httpPatch = new HttpPatch(url);
+		httpPatch.addHeader(Header);
+		httpPatch.addHeader(PrintHeader);
+		return httpPatch;
+	}
+	
+	public HttpDelete getHttpDelete(String url)
+	{
+		HttpDelete httpDelete = new HttpDelete(url);
+		httpDelete.addHeader(Header);
+		httpDelete.addHeader(PrintHeader);
+		return httpDelete;
+	}
+	
+	/*public String  getID(String url, String query) throws IOException
+	{
+		String query_c = getQuery(query);
+		String baseurl = url+"/query?q="+query_c;
+		String ID;
+		HttpGet httpGet = getHttp(baseurl);
+		HttpResponse response = getResponse(httpGet);
+		
+		int statuscode = 200;
+		if(getStatusCode(response, statuscode) == statuscode)
+		{
+			String response_string = EntityUtils.toString(response.getEntity());
+			JSONObject json = new JSONObject(response_string);
+			System.out.println("JSON result of Query:\n" + json.toString(1));
+			JSONArray j = json.getJSONArray("records");
+			if(j.length() ==1)
+			{
+				ID = json.getJSONArray("records").getJSONObject(0).getString("Id");
+				//System.out.println(ID);
+				return ID;
+			} else {
+				System.out.println("No Records or More than one ID has returned...");
+				return "No ID";
+			}
+		}
+return null;
 
+	}*/
+	
+	public String getQuery(String query) 
+	{
+		String query_c = replaceString(query);
+		return query_c;
+	}
+	
+
+	public String replaceString(String value)
+	{
+		String result = value.replace(" ", "+");
+		return result;
+	}
+
+	public static class HttpPatch extends HttpPost {
+		public HttpPatch(String url) 
+		{
+			super(url);
+		}
+
+		public String getMethod() 
+		{
+			return "PATCH";
+		}
+	}
 }
