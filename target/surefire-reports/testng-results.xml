@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="8660" started-at="2019-07-02T19:54:31Z" finished-at="2019-07-02T19:54:40Z">
+  <suite name="Suite" duration-ms="8878" started-at="2019-07-03T20:00:08Z" finished-at="2019-07-03T20:00:17Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="8660" started-at="2019-07-02T19:54:31Z" finished-at="2019-07-02T19:54:40Z">
+    <test name="Test" duration-ms="8878" started-at="2019-07-03T20:00:08Z" finished-at="2019-07-03T20:00:17Z">
       <class name="Rest_HTTP_test_case.Contact_Object">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@264c5d07]" name="getConnection" is-config="true" duration-ms="3712" started-at="2019-07-02T19:54:31Z" finished-at="2019-07-02T19:54:35Z">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@2b9b7f1f]" name="getConnection" is-config="true" duration-ms="2704" started-at="2019-07-03T20:00:08Z" finished-at="2019-07-03T20:00:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="Create_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@264c5d07]" name="Create_ContactObjects" duration-ms="2103" started-at="2019-07-02T19:54:35Z" finished-at="2019-07-02T19:54:37Z">
+        <test-method status="PASS" signature="checkDuplicates()[pri:1, instance:Rest_HTTP_test_case.Contact_Object@2b9b7f1f]" name="checkDuplicates" duration-ms="6161" started-at="2019-07-03T20:00:11Z" finished-at="2019-07-03T20:00:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Create_ContactObjects -->
-        <test-method status="PASS" signature="Update_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@264c5d07]" name="Update_ContactObjects" duration-ms="2812" started-at="2019-07-02T19:54:37Z" finished-at="2019-07-02T19:54:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Update_ContactObjects -->
+        </test-method> <!-- checkDuplicates -->
       </class> <!-- Rest_HTTP_test_case.Contact_Object -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

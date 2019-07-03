@@ -76,7 +76,25 @@ public class Contact_Object implements API_Variables
 		System.out.println("baseUrl: "+ baseUrl);
 	}
 
-	@Test(enabled = true)
+
+	@Test(priority=1)
+	public void checkDuplicates() throws IOException
+	{
+		ContactId = methods.getID(baseUrl, query);
+		System.out.println(ContactId);
+		if (ContactId.equals("No ID"))
+		{
+			System.out.println("Creating Records.......");
+			Create_ContactObjects();
+			System.out.println("Updating Records.......");
+			Update_ContactObjects();
+		}else {
+			System.out.println("Deleting Records.......");
+			Delete_ContactObject();
+		}
+	}
+
+	@Test(enabled = false)
 	public void Create_ContactObjects() throws IOException
 	{
 
@@ -90,8 +108,8 @@ public class Contact_Object implements API_Variables
 
 		HttpPost httpPost =	HTTP.getHttpPost(url);
 
-		StringEntity body = new StringEntity(create_contact.toString(1));
-		body.setContentType("application/json");
+		StringEntity body = HTTP.getBody(create_contact);
+		
 		httpPost.setEntity(body);
 
 		HttpResponse response = HTTP.getResponsePost(httpPost);
@@ -104,14 +122,14 @@ public class Contact_Object implements API_Variables
 	}
 
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Update_ContactObjects() throws IOException
 	{
 
-		if(ContactId == null)
+		if(ContactId == null || ContactId.equals("No ID"))
 		{
 
-			System.out.println("\nID is null. Getting ID.......");
+			System.out.println("ID is null. Getting ID.......");
 			ContactId = methods.getID(baseUrl, query);
 			System.out.println(ContactId);
 
@@ -121,17 +139,19 @@ public class Contact_Object implements API_Variables
 		{
 			int statuscode = 204;
 			String url = baseUrl + "/sobjects/Contact/" + ContactId;
-			JSONObject contact = new JSONObject();
-			contact.put("LastName", "REST_API-UPDATED");
-			contact.put("MobilePhone", "9046789");
-			contact.put("Title", ContactTitle);
+			JSONObject update_contact = new JSONObject();
+			update_contact.put("LastName", "REST_API-UPDATED");
+			update_contact.put("MobilePhone", "9046789");
+			update_contact.put("Title", ContactTitle);
 			//contact.put("AccountId","QE-Automation");
 
 			REST_HTTP.API_Utilities.HttpPatch httpPatch = HTTP.getHttpPatch(url);
-			StringEntity body = new StringEntity(contact.toString(1));
-			body.setContentType("application/json");
+			
+			StringEntity body = HTTP.getBody(update_contact);
+			
 			httpPatch.setEntity(body);
 			HttpResponse response = HTTP.getResponsePost(httpPatch);
+			System.out.println("Status code: "+HTTP.getStatusCode(response,statuscode));
 			if(HTTP.getStatusCode(response, statuscode) == statuscode)
 			{
 				System.out.println("Updated Successfully.....");
@@ -164,13 +184,13 @@ public class Contact_Object implements API_Variables
 			System.out.println(url);
 			HttpDelete httpDelete = HTTP.getHttpDelete(url);
 			HttpResponse response = HTTP.getResponseDelete(httpDelete);
-
+			System.out.println("Status code: "+HTTP.getStatusCode(response,statuscode));
 			if(HTTP.getStatusCode(response, statuscode) == statuscode)
 			{
-				System.out.println("\nDeleted Successfully.....");
+				System.out.println("Deleted Successfully.....");
 			}
 			else  {
-				System.out.println("\nError......");
+				System.out.println("\nError......\n");
 			}
 		}else
 		{
