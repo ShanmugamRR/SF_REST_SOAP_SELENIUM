@@ -1,5 +1,4 @@
 package Rest_HTTP_test_case;
-
 import java.io.IOException;
 import java.util.PriorityQueue;
 import org.apache.http.Header;
@@ -20,11 +19,9 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import REST_HTTP.API_Methods;
 import REST_HTTP.API_Utilities;
 import REST_HTTP.API_Variables;
-
 
 public class Contact_Object implements API_Variables
 {
@@ -35,37 +32,28 @@ public class Contact_Object implements API_Variables
 	static String ContactTitle = "Shanmugam_TEST";
 	static String ContactEmail = "shan.2408@salesforce.com";
 	static String query = "Select id from contact where Email ='"+ContactEmail+"'";
-
 	API_Utilities HTTP = new API_Utilities();
 	API_Methods methods = new API_Methods();
-
-
+	
 	@BeforeTest
 	public void getConnection() throws IOException
 	{
 		String loginURL = LOGINURL + GRANTSERVICE + "&client_id=" 
 				+ CLIENTID + "&client_secret=" + CLIENTSECRET + "&username=" 
 				+ USERNAME + "&password=" + PASSWORD;
-
 		HttpPost httpPost=	HTTP.getHttpPost(loginURL);
 		HttpResponse response = HTTP.getResponsePost(httpPost);
-
 		int statuscode = 200;
 		System.out.println("Status code: "+HTTP.getStatusCode(response,statuscode));
-
 		String loginAccessToken = null;
 		String loginInstanceUrl = null;
-
 		JSONObject json=HTTP.getJSONToken(response);
-
 		try {
-
 			loginAccessToken = json.getString("access_token");
 			loginInstanceUrl = json.getString("instance_url");
 		} catch (JSONException jsonException) {
 			jsonException.printStackTrace();
 		}
-
 		baseUrl = loginInstanceUrl + REST_ENDPOINT + API_VERSION ;
 		HTTP.Header = new BasicHeader("Authorization", "OAuth " + loginAccessToken) ;
 		System.out.println("_Header: " +HTTP.Header);
@@ -75,8 +63,7 @@ public class Contact_Object implements API_Variables
 		System.out.println("access token/session ID: "+loginAccessToken);
 		System.out.println("baseUrl: "+ baseUrl);
 	}
-
-
+	
 	@Test(priority=1)
 	public void checkDuplicates() throws IOException
 	{
@@ -93,25 +80,19 @@ public class Contact_Object implements API_Variables
 			Delete_ContactObject();
 		}
 	}
-
+	
 	@Test(enabled = false)
 	public void Create_ContactObjects() throws IOException
 	{
-
 		String url = baseUrl + "/sobjects/Contact/";
 		int statuscode = 201;
-
 		JSONObject create_contact = new JSONObject();
 		create_contact.put("FirstName",ContactFirstName);
 		create_contact.put("LastName", ContactLastName);
 		create_contact.put("Email", ContactEmail);
-
 		HttpPost httpPost =	HTTP.getHttpPost(url);
-
 		StringEntity body = HTTP.getBody(create_contact);
-		
 		httpPost.setEntity(body);
-
 		HttpResponse response = HTTP.getResponsePost(httpPost);
 		System.out.println("Status code: "+HTTP.getStatusCode(response,statuscode));
 		if(HTTP.getStatusCode(response,statuscode) == statuscode)
@@ -120,21 +101,16 @@ public class Contact_Object implements API_Variables
 		}else { System.out.println("Error...");
 		}
 	}
-
-
+	
 	@Test(enabled = false)
 	public void Update_ContactObjects() throws IOException
 	{
-
 		if(ContactId == null || ContactId.equals("No ID"))
 		{
-
 			System.out.println("ID is null. Getting ID.......");
 			ContactId = methods.getID(baseUrl, query);
 			System.out.println(ContactId);
-
 		} 
-
 		if(!(ContactId.equals("No ID")))
 		{
 			int statuscode = 204;
@@ -143,12 +119,8 @@ public class Contact_Object implements API_Variables
 			update_contact.put("LastName", "REST_API-UPDATED");
 			update_contact.put("MobilePhone", "9046789");
 			update_contact.put("Title", ContactTitle);
-			//contact.put("AccountId","QE-Automation");
-
 			REST_HTTP.API_Utilities.HttpPatch httpPatch = HTTP.getHttpPatch(url);
-			
 			StringEntity body = HTTP.getBody(update_contact);
-			
 			httpPatch.setEntity(body);
 			HttpResponse response = HTTP.getResponsePost(httpPatch);
 			System.out.println("Status code: "+HTTP.getStatusCode(response,statuscode));
@@ -163,19 +135,16 @@ public class Contact_Object implements API_Variables
 		else {
 			System.out.println("No ID retruned.....");
 		}
-
 	}
-
+	
 	@Test(enabled = false)
 	public void Delete_ContactObject() throws IOException
 	{
 		if(ContactId == null)
 		{
-
 			System.out.println("\nID is null. Getting ID.......");
 			ContactId = methods.getID(baseUrl, query);
 			System.out.println(ContactId);
-
 		}
 		if(!(ContactId.equals("No ID")))
 		{
@@ -196,13 +165,5 @@ public class Contact_Object implements API_Variables
 		{
 			System.out.println("No ID returned");
 		}
-
-
-
 	}
-
-
-
 }
-
-
