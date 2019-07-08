@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="8878" started-at="2019-07-03T20:00:08Z" finished-at="2019-07-03T20:00:17Z">
+  <suite name="Surefire suite" duration-ms="28297" started-at="2019-07-08T16:42:43Z" finished-at="2019-07-08T16:43:11Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="8878" started-at="2019-07-03T20:00:08Z" finished-at="2019-07-03T20:00:17Z">
+    <test name="Surefire test" duration-ms="28297" started-at="2019-07-08T16:42:43Z" finished-at="2019-07-08T16:43:11Z">
       <class name="Rest_HTTP_test_case.Contact_Object">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@2b9b7f1f]" name="getConnection" is-config="true" duration-ms="2704" started-at="2019-07-03T20:00:08Z" finished-at="2019-07-03T20:00:11Z">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@4c203ea1]" name="getConnection" is-config="true" duration-ms="8733" started-at="2019-07-08T16:42:43Z" finished-at="2019-07-08T16:42:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="checkDuplicates()[pri:1, instance:Rest_HTTP_test_case.Contact_Object@2b9b7f1f]" name="checkDuplicates" duration-ms="6161" started-at="2019-07-03T20:00:11Z" finished-at="2019-07-03T20:00:17Z">
+        <test-method status="PASS" signature="checkDuplicates()[pri:1, instance:Rest_HTTP_test_case.Contact_Object@4c203ea1]" name="checkDuplicates" duration-ms="19513" started-at="2019-07-08T16:42:52Z" finished-at="2019-07-08T16:43:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDuplicates -->
       </class> <!-- Rest_HTTP_test_case.Contact_Object -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>
