@@ -17,6 +17,7 @@ public class API_Methods
 	{
 		String query_c = api.getQuery(query);
 		String baseurl = url+"/query?q="+query_c;
+		//System.out.println(baseurl);
 		String ID;
 		HttpGet httpGet = api.getHttp(baseurl);
 		HttpResponse response = api.getResponse(httpGet);

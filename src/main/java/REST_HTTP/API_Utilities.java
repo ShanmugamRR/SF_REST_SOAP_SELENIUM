@@ -1,6 +1,7 @@
 package REST_HTTP;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
@@ -113,35 +114,20 @@ public class API_Utilities
 		httpDelete.addHeader(PrintHeader);
 		return httpDelete;
 	}
-	
-	/*public String  getID(String url, String query) throws IOException
-	{
-		String query_c = getQuery(query);
-		String baseurl = url+"/query?q="+query_c;
-		String ID;
-		HttpGet httpGet = getHttp(baseurl);
-		HttpResponse response = getResponse(httpGet);
-		
-		int statuscode = 200;
-		if(getStatusCode(response, statuscode) == statuscode)
-		{
-			String response_string = EntityUtils.toString(response.getEntity());
-			JSONObject json = new JSONObject(response_string);
-			System.out.println("JSON result of Query:\n" + json.toString(1));
-			JSONArray j = json.getJSONArray("records");
-			if(j.length() ==1)
-			{
-				ID = json.getJSONArray("records").getJSONObject(0).getString("Id");
-				//System.out.println(ID);
-				return ID;
-			} else {
-				System.out.println("No Records or More than one ID has returned...");
-				return "No ID";
-			}
-		}
-return null;
 
-	}*/
+	
+	public JSONObject getJsonObj()
+	{
+		JSONObject json = new JSONObject();
+			return json;
+	}
+	
+	public StringEntity getBody(JSONObject json) throws IOException, JSONException
+	{
+		StringEntity body = new StringEntity(json.toString(1));
+		body.setContentType("application/json");
+		return body;
+	}
 	
 	public String getQuery(String query) 
 	{
