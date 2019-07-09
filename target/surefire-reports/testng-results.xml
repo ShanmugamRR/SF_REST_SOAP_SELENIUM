@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="28297" started-at="2019-07-08T16:42:43Z" finished-at="2019-07-08T16:43:11Z">
+  <suite name="Surefire suite" duration-ms="4893" started-at="2019-07-09T18:42:08Z" finished-at="2019-07-09T18:42:13Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="28297" started-at="2019-07-08T16:42:43Z" finished-at="2019-07-08T16:43:11Z">
-      <class name="Rest_HTTP_test_case.Contact_Object">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@4c203ea1]" name="getConnection" is-config="true" duration-ms="8733" started-at="2019-07-08T16:42:43Z" finished-at="2019-07-08T16:42:52Z">
+    <test name="Surefire test" duration-ms="4893" started-at="2019-07-09T18:42:08Z" finished-at="2019-07-09T18:42:13Z">
+      <class name="Rest_HTTP_test_case.Contact_Create">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Create@7dc36524]" name="getConnection" is-config="true" duration-ms="2861" started-at="2019-07-09T18:42:08Z" finished-at="2019-07-09T18:42:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="checkDuplicates()[pri:1, instance:Rest_HTTP_test_case.Contact_Object@4c203ea1]" name="checkDuplicates" duration-ms="19513" started-at="2019-07-08T16:42:52Z" finished-at="2019-07-08T16:43:11Z">
+        <test-method status="PASS" signature="Create_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Create@7dc36524]" name="Create_ContactObjects" duration-ms="2015" started-at="2019-07-09T18:42:11Z" finished-at="2019-07-09T18:42:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkDuplicates -->
-      </class> <!-- Rest_HTTP_test_case.Contact_Object -->
+        </test-method> <!-- Create_ContactObjects -->
+      </class> <!-- Rest_HTTP_test_case.Contact_Create -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
