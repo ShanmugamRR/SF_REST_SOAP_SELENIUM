@@ -57,8 +57,8 @@ public class Contact_Create implements API_Variables
 	public void Create_ContactObjects() throws IOException
 	{
 		inputs.ContactId = methods.getID(inputs.baseUrl, inputs.query);
-		System.out.println(inputs.ContactId);
-		if (inputs.ContactId.equals("No ID"))
+		System.out.println("ContactID is:"+inputs.ContactId);
+		if (inputs.ContactId == null || inputs.ContactId.equals("No ID"))
 		{
 		String url = inputs.baseUrl + "/sobjects/Contact/";
 		int statuscode = 201;

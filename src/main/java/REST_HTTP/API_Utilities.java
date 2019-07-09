@@ -18,8 +18,8 @@ import org.json.JSONTokener;
 public class API_Utilities 
 {
 
-	public Header Header;
-	public Header PrintHeader = new BasicHeader("X-PrettyPrint", "1");
+	public static Header Header;
+	public static Header PrintHeader = new BasicHeader("X-PrettyPrint", "1");
 
 	//API_Utilities HTTP = new API_Utilities();
 /*	public API_Utilities()
@@ -27,10 +27,10 @@ public class API_Utilities
 		
 	}*/
 
-	public int getStatusCode(HttpResponse response, int statuscode) 
+	public int getStatusCode(HttpResponse response, int statuscode_1) 
 	{
 		int status_Code = response.getStatusLine().getStatusCode() ;
-		if (status_Code != statuscode) 
+		if (status_Code != statuscode_1) 
 		{
 			System.out.println("Error Code: "+status_Code);	
 		}
