@@ -58,7 +58,7 @@ public class Contact_Delete implements API_Variables
 	{
 		if(inputs.ContactId == null)
 		{
-			System.out.println("\nID is null. Getting ID.......");
+			System.out.println("ID is null. Getting ID.......");
 			inputs.ContactId = methods.getID(inputs.baseUrl, inputs.query);
 			System.out.println(inputs.ContactId);
 		}
