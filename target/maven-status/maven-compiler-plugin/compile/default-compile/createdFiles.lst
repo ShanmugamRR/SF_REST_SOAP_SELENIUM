@@ -1,4 +1,5 @@
 REST_HTTP\API_Variables.class
+REST_HTTP\API_Contact_Inputs.class
 REST_HTTP\API_Utilities.class
 REST_HTTP\API_Methods.class
 REST_HTTP\API_Utilities$HttpPatch.class

@@ -1,22 +1,16 @@
 package REST_HTTP;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPatch;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -24,8 +18,8 @@ import org.json.JSONTokener;
 public class API_Utilities 
 {
 
-	public static Header Header;
-	public static Header PrintHeader = new BasicHeader("X-PrettyPrint", "1");
+	public Header Header;
+	public Header PrintHeader = new BasicHeader("X-PrettyPrint", "1");
 
 	//API_Utilities HTTP = new API_Utilities();
 /*	public API_Utilities()
