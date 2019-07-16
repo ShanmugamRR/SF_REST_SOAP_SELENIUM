@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="6843" started-at="2019-07-09T21:23:36Z" finished-at="2019-07-09T21:23:43Z">
+  <suite name="Surefire suite" duration-ms="6209" started-at="2019-07-10T04:24:39Z" finished-at="2019-07-10T04:24:45Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="6843" started-at="2019-07-09T21:23:36Z" finished-at="2019-07-09T21:23:43Z">
-      <class name="Rest_HTTP_test_case.Contact_Delete">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Delete@75bd9247]" name="getConnection" is-config="true" duration-ms="2876" started-at="2019-07-09T21:23:36Z" finished-at="2019-07-09T21:23:39Z">
+    <test name="Surefire test" duration-ms="6209" started-at="2019-07-10T04:24:39Z" finished-at="2019-07-10T04:24:45Z">
+      <class name="Rest_HTTP_test_case.Contact_Create">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Create@5ba23b66]" name="getConnection" is-config="true" duration-ms="2745" started-at="2019-07-10T04:24:39Z" finished-at="2019-07-10T04:24:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="Delete_ContactObject()[pri:0, instance:Rest_HTTP_test_case.Contact_Delete@75bd9247]" name="Delete_ContactObject" duration-ms="3937" started-at="2019-07-09T21:23:39Z" finished-at="2019-07-09T21:23:43Z">
+        <test-method status="PASS" signature="Create_ContactObjects()[pri:0, instance:Rest_HTTP_test_case.Contact_Create@5ba23b66]" name="Create_ContactObjects" duration-ms="3448" started-at="2019-07-10T04:24:42Z" finished-at="2019-07-10T04:24:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Delete_ContactObject -->
-      </class> <!-- Rest_HTTP_test_case.Contact_Delete -->
+        </test-method> <!-- Create_ContactObjects -->
+      </class> <!-- Rest_HTTP_test_case.Contact_Create -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
