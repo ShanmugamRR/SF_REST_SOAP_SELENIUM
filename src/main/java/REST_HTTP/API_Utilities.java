@@ -21,11 +21,6 @@ public class API_Utilities
 	public static Header Header;
 	public static Header PrintHeader = new BasicHeader("X-PrettyPrint", "1");
 
-	//API_Utilities HTTP = new API_Utilities();
-/*	public API_Utilities()
-	{
-		
-	}*/
 
 	public int getStatusCode(HttpResponse response, int statuscode_1) 
 	{
