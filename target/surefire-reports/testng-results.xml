@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="11348" started-at="2019-07-18T19:11:57Z" finished-at="2019-07-18T19:12:08Z">
+  <suite name="Surefire suite" duration-ms="74835" started-at="2019-07-18T22:27:22Z" finished-at="2019-07-18T22:28:37Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="11348" started-at="2019-07-18T19:11:57Z" finished-at="2019-07-18T19:12:08Z">
-      <class name="Rest_HTTP_test_case.Contact_Object">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@6bdf28bb]" name="getConnection" is-config="true" duration-ms="3909" started-at="2019-07-18T19:11:57Z" finished-at="2019-07-18T19:12:01Z">
+    <test name="Surefire test" duration-ms="74835" started-at="2019-07-18T22:27:22Z" finished-at="2019-07-18T22:28:37Z">
+      <class name="SELENIUM_WEBDRIVER_test_case.Contact_Object">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="openBrowser" is-config="true" duration-ms="39483" started-at="2019-07-18T22:27:22Z" finished-at="2019-07-18T22:28:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="checkDuplicates()[pri:0, instance:Rest_HTTP_test_case.Contact_Object@6bdf28bb]" name="checkDuplicates" duration-ms="7419" started-at="2019-07-18T19:12:01Z" finished-at="2019-07-18T19:12:08Z">
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="Create_Contact()[pri:1, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="Create_Contact" duration-ms="18228" started-at="2019-07-18T22:28:01Z" finished-at="2019-07-18T22:28:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkDuplicates -->
-      </class> <!-- Rest_HTTP_test_case.Contact_Object -->
+        </test-method> <!-- Create_Contact -->
+        <test-method status="PASS" signature="Update_Contact()[pri:2, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="Update_Contact" duration-ms="16707" started-at="2019-07-18T22:28:20Z" finished-at="2019-07-18T22:28:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Update_Contact -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="afterTest" is-config="true" duration-ms="371" started-at="2019-07-18T22:28:36Z" finished-at="2019-07-18T22:28:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- SELENIUM_WEBDRIVER_test_case.Contact_Object -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
