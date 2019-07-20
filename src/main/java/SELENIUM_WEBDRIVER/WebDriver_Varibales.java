@@ -1,19 +1,21 @@
 package SELENIUM_WEBDRIVER;
 
+import CONFIG_PROPERTIES.*;
+
 public interface WebDriver_Varibales 
 {
 	//Salesforce Login
-	public static final String SF_USERNAME     	= "shan.2408@gmail.com";
-	public static final String SF_PASSWORD     	= "Beat@2013";
-	public static final String SF_LOGINURL     	= "https://login.salesforce.com"; 
+	public static final String SF_USERNAME     	= System_Properties_Methods.getInput().getProperty("SF_UI_USERNAME");
+	public static final String SF_PASSWORD     	= System_Properties_Methods.getInput().getProperty("SF_UI_PASSWORD");
+	public static final String SF_LOGINURL     	= System_Properties_Methods.getInput().getProperty("SF_LOGINURL"); 
 	
 	//Local ChromeDriver 
-	public static final String CHROMEDRIVER		= "E:\\OFFICE\\TOOLS\\ECLIPSE\\chromedriver_win32\\chromedriver.exe";
+	public static final String CHROMEDRIVER		= System_Properties_Methods.getInput().getProperty("CHROMEDRIVERPATH");
 	
 	//SauceLabs Details
-	public static final String SL_USERNAME = "shan.2408";
-	public static final String SL_ACCESS_KEY = "7cc2e52e-98e3-4568-944e-cd9600b683f5";
-	public static final String SL_URL = "http://ondemand.saucelabs.com:80/wd/hub";
+	public static final String SL_USERNAME = System_Properties_Methods.getInput().getProperty("SL_USERNAME");
+	public static final String SL_ACCESS_KEY = System_Properties_Methods.getInput().getProperty("SL_ACCESS_KEY");
+	public static final String SL_URL = System_Properties_Methods.getInput().getProperty("SL_URL");
 	
 	//Login 
 	public static String USER =	"input#username";

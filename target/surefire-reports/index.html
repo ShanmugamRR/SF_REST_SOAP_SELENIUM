@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="SELENIUM_WEBDRIVER_test_case.Contact_Object" hash-for-method="Create_Contact">Create_Contact</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="SELENIUM_WEBDRIVER_test_case.Contact_Object" hash-for-method="Delete_Contact">Delete_Contact</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -133,6 +138,13 @@
                   <a name="Create_Contact">
                   </a> <!-- Create_Contact -->
                   <span class="method-name">Create_Contact</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Delete_Contact">
+                  </a> <!-- Delete_Contact -->
+                  <span class="method-name">Delete_Contact</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -195,20 +207,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Create_Contact')
+data.setCell(0, 1, 'Update_Contact')
 data.setCell(0, 2, 'SELENIUM_WEBDRIVER_test_case.Contact_Object')
-data.setCell(0, 3, 18228);
+data.setCell(0, 3, 19478);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Update_Contact')
+data.setCell(1, 1, 'Create_Contact')
 data.setCell(1, 2, 'SELENIUM_WEBDRIVER_test_case.Contact_Object')
-data.setCell(1, 3, 16707);
+data.setCell(1, 3, 17703);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Delete_Contact')
+data.setCell(2, 2, 'SELENIUM_WEBDRIVER_test_case.Contact_Object')
+data.setCell(2, 3, 13841);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
+              <span class="suite-total-time">Total running time: 51 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -223,15 +239,13 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">SELENIUM_WEBDRIVER_test_case.Contact_Object</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">Contact_Object</span>
-                <br/>
-                <span class="ignored-method-name">Delete_Contact</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -250,15 +264,19 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">Create_Contact</span>
-                <span class="method-start">39519 ms</span>
+                <span class="method-start">49240 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Update_Contact</span>
-                <span class="method-start">57756 ms</span>
+                <span class="method-start">66943 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Delete_Contact</span>
+                <span class="method-start">86421 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">74464 ms</span>
+                <span class="method-start">100262 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
