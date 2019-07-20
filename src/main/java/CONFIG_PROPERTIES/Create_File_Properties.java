@@ -10,11 +10,11 @@ public class Create_File_Properties {
 	public static void main(String[] args) 
 	{
 		
-		/*try (OutputStream output = new FileOutputStream(".//resources//system.properties"))
+		try (OutputStream output = new FileOutputStream(".//resources//system.properties"))
 		{
 			Properties prop = new Properties();
-			prop.setProperty("SF_USERNAME", "shan.2408@gmail.com");
-			prop.setProperty("SF_PASSWORD", "Beat@2013LpVWQmoTT08KnxYVSkC55tbnh");
+			prop.setProperty("SF_USERNAME", "");
+			prop.setProperty("SF_PASSWORD", "");
 			
 			prop.store(output, null);
 			
@@ -24,11 +24,8 @@ public class Create_File_Properties {
 		catch(IOException io)
 		{
 			io.printStackTrace();
-		}*/
-		System_Properties_Methods sys = new System_Properties_Methods();
-		Properties prop = new Properties();
-		prop = sys.getInput();
-		System.out.println("\nUserName is: "+prop.getProperty("SF_USERNAME"));
+		}
+		
 	}
 
 }
