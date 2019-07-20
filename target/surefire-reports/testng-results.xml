@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
+<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="74835" started-at="2019-07-18T22:27:22Z" finished-at="2019-07-18T22:28:37Z">
+  <suite name="Surefire suite" duration-ms="100667" started-at="2019-07-20T03:02:40Z" finished-at="2019-07-20T03:04:21Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="74835" started-at="2019-07-18T22:27:22Z" finished-at="2019-07-18T22:28:37Z">
+    <test name="Surefire test" duration-ms="100667" started-at="2019-07-20T03:02:40Z" finished-at="2019-07-20T03:04:21Z">
       <class name="SELENIUM_WEBDRIVER_test_case.Contact_Object">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="openBrowser" is-config="true" duration-ms="39483" started-at="2019-07-18T22:27:22Z" finished-at="2019-07-18T22:28:01Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="openBrowser" is-config="true" duration-ms="49205" started-at="2019-07-20T03:02:40Z" finished-at="2019-07-20T03:03:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="Create_Contact()[pri:1, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="Create_Contact" duration-ms="18228" started-at="2019-07-18T22:28:01Z" finished-at="2019-07-18T22:28:20Z">
+        <test-method status="PASS" signature="Create_Contact()[pri:1, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="Create_Contact" duration-ms="17703" started-at="2019-07-20T03:03:29Z" finished-at="2019-07-20T03:03:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Create_Contact -->
-        <test-method status="PASS" signature="Update_Contact()[pri:2, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="Update_Contact" duration-ms="16707" started-at="2019-07-18T22:28:20Z" finished-at="2019-07-18T22:28:36Z">
+        <test-method status="PASS" signature="Update_Contact()[pri:2, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="Update_Contact" duration-ms="19478" started-at="2019-07-20T03:03:47Z" finished-at="2019-07-20T03:04:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Update_Contact -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="afterTest" is-config="true" duration-ms="371" started-at="2019-07-18T22:28:36Z" finished-at="2019-07-18T22:28:37Z">
+        <test-method status="PASS" signature="Delete_Contact()[pri:3, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="Delete_Contact" duration-ms="13841" started-at="2019-07-20T03:04:06Z" finished-at="2019-07-20T03:04:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Delete_Contact -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="afterTest" is-config="true" duration-ms="401" started-at="2019-07-20T03:04:20Z" finished-at="2019-07-20T03:04:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
