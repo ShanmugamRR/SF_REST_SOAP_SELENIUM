@@ -25,31 +25,7 @@ public class Contact_Update implements API_Variables
 	@BeforeTest
 	public void getConnection() throws IOException
 	{
-		String loginURL = LOGINURL + GRANTSERVICE + "&client_id=" 
-				+ CLIENTID + "&client_secret=" + CLIENTSECRET + "&username=" 
-				+ USERNAME + "&password=" + PASSWORD;
-		//https://login.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9G9pzCUSkzZuq3BzJXe_gTkvgpzcGhGCA5kn8BXIeFCqY3YYWk1Pr5WdNdLZBKxwWCNj9yOvRbRx98nPH&client_secret=7778334A69FA68A904EA08DD4AEC396444399C2B2CB748B60AFE223493AD56BB&username=shan.2408@gmail.com&password=Beat@2013LpVWQmoTT08KnxYVSkC55tbnh
-		System.out.println(loginURL);
-		HttpPost httpPost=	HTTP.getHttpPost(loginURL);
-		HttpResponse response = HTTP.getResponsePost(httpPost);
-		int statuscode = 200;
-		System.out.println("Status code: "+HTTP.getStatusCode(response,statuscode));
-		String loginAccessToken = null;
-		String loginInstanceUrl = null;
-		JSONObject json=HTTP.getJSONToken(response);
-		try {
-			loginAccessToken = json.getString("access_token");
-			loginInstanceUrl = json.getString("instance_url");
-		} catch (JSONException jsonException) {
-			jsonException.printStackTrace();
-		}
-		inputs.baseUrl = loginInstanceUrl + REST_ENDPOINT + API_VERSION ;
-		HTTP.Header = new BasicHeader("Authorization", "OAuth " + loginAccessToken) ;
-		System.out.println("_Header: " +HTTP.Header);
-		System.out.println("\n" + response.getStatusLine());
-		System.out.println("Successful login");
-		System.out.println("instance URL: "+loginInstanceUrl);
-		System.out.println("access token/session ID: "+loginAccessToken);
+		inputs.baseUrl = methods.getBaseURL();
 		System.out.println("baseUrl: "+ inputs.baseUrl);
 	}
 	

@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="6843" started-at="2019-07-09T21:23:36Z" finished-at="2019-07-09T21:23:43Z">
+  <suite name="Surefire suite" duration-ms="100667" started-at="2019-07-20T03:02:40Z" finished-at="2019-07-20T03:04:21Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="6843" started-at="2019-07-09T21:23:36Z" finished-at="2019-07-09T21:23:43Z">
-      <class name="Rest_HTTP_test_case.Contact_Delete">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:Rest_HTTP_test_case.Contact_Delete@75bd9247]" name="getConnection" is-config="true" duration-ms="2876" started-at="2019-07-09T21:23:36Z" finished-at="2019-07-09T21:23:39Z">
+    <test name="Surefire test" duration-ms="100667" started-at="2019-07-20T03:02:40Z" finished-at="2019-07-20T03:04:21Z">
+      <class name="SELENIUM_WEBDRIVER_test_case.Contact_Object">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="openBrowser" is-config="true" duration-ms="49205" started-at="2019-07-20T03:02:40Z" finished-at="2019-07-20T03:03:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="Delete_ContactObject()[pri:0, instance:Rest_HTTP_test_case.Contact_Delete@75bd9247]" name="Delete_ContactObject" duration-ms="3937" started-at="2019-07-09T21:23:39Z" finished-at="2019-07-09T21:23:43Z">
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="Create_Contact()[pri:1, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="Create_Contact" duration-ms="17703" started-at="2019-07-20T03:03:29Z" finished-at="2019-07-20T03:03:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Delete_ContactObject -->
-      </class> <!-- Rest_HTTP_test_case.Contact_Delete -->
+        </test-method> <!-- Create_Contact -->
+        <test-method status="PASS" signature="Update_Contact()[pri:2, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="Update_Contact" duration-ms="19478" started-at="2019-07-20T03:03:47Z" finished-at="2019-07-20T03:04:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Update_Contact -->
+        <test-method status="PASS" signature="Delete_Contact()[pri:3, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="Delete_Contact" duration-ms="13841" started-at="2019-07-20T03:04:06Z" finished-at="2019-07-20T03:04:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Delete_Contact -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:SELENIUM_WEBDRIVER_test_case.Contact_Object@1e67b872]" name="afterTest" is-config="true" duration-ms="401" started-at="2019-07-20T03:04:20Z" finished-at="2019-07-20T03:04:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- SELENIUM_WEBDRIVER_test_case.Contact_Object -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
