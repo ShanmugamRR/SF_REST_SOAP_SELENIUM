@@ -49,6 +49,8 @@
     <groupId>com.force.api</groupId>
     <artifactId>force-wsc</artifactId>
     <version>46.1.0</version>
+    <scope>system</scope>
+			<systemPath>${project.basedir}/libs/force-wsc-46.1.0-uber.jar</systemPath>
 </dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
