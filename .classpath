@@ -22,5 +22,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="E:/OFFICE/TOOLS/ECLIPSE/wsc/target/enterprise.jar"/>
+	<classpathentry kind="lib" path="E:/OFFICE/TOOLS/ECLIPSE/wsc/target/force-wsc-46.1.0-uber.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

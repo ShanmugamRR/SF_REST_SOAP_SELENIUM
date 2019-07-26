@@ -1,8 +1,5 @@
-package SOAP_test_case;
+package SOAP_WSDL;
 
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 import com.sforce.soap.enterprise.Connector;
 import com.sforce.soap.enterprise.DeleteResult;
 import com.sforce.soap.enterprise.EnterpriseConnection;
@@ -12,19 +9,15 @@ import com.sforce.soap.enterprise.SaveResult;
 import com.sforce.soap.enterprise.sobject.Contact;
 import com.sforce.ws.ConnectionException;
 import com.sforce.ws.ConnectorConfig;
-import com.sun.jna.platform.win32.WinUser.INPUT;
 
-import REST_HTTP.API_Contact_Inputs;
 import REST_HTTP.API_Variables;
 
-public class Contact_Object implements API_Variables
+public class SOAP_API_methods implements API_Variables
 {
 	static EnterpriseConnection connection;
 	static String ContactID;
-	API_Contact_Inputs input = new API_Contact_Inputs();
-	/*
-	@BeforeTest
-	public void getConnection()
+	
+	public static void getConnection()
 	{
 		ConnectorConfig config = new ConnectorConfig();
 		config.setUsername(USERNAME);
@@ -38,121 +31,23 @@ public class Contact_Object implements API_Variables
 			System.out.println("Service EndPoint: "+config.getServiceEndpoint());
 			System.out.println("Username: "+config.getUsername());
 			System.out.println("SessionId: "+config.getSessionId());
-
-		} catch (ConnectionException e1) {
+		}
+		catch(ConnectionException e1) {
 			e1.printStackTrace();
 		} 
-
 	}
-
-	@Test
-	(enabled = false)
-	public void finalTests()
+	
+	public static void closeConnection()
 	{
-
-	}
-
-	@Test
-	(enabled = true)
-	public void create_Contact()
-	{
-		System.out.println("Creating new test Contacts...");
-		Contact[] records = new Contact[1];
-		Contact cont= new Contact();
-		cont.setFirstName("Test_API");
-		cont.setLastName("SOAP_API");
-		cont.setEmail("shan.2408@salesforce.com");
-		records[1] = cont;
-
-		try {
-			SaveResult[] saveResults = connection.create(records);
-			if (saveResults[1].isSuccess()) 
-			{
-				System.out.println("Successfully created record - Id: " + saveResults[1].getId());
-			} else 
-			{
-				Error[] errors = saveResults[1].getErrors();
-				System.out.println("ERROR creating record: " + errors[1].getMessage()); 
-			}
-		} catch (ConnectionException e) {
-			e.printStackTrace();
-		}
-	}
-
-	@Test
-	(enabled = false)
-	public void update_Contact()
-	{
-
-	}
-
-	@Test
-	(enabled = false)
-	public void delete_Contact()
-	{
-
-	}	
-
-	@AfterTest
-	public void afterTest()
-	{
-
-	}*/
-
-
-	public static void main(String[] args) {
-
-		ConnectorConfig config = new ConnectorConfig();
-		config.setUsername(USERNAME);
-		config.setPassword(PASSWORD);
-
-		try {
-			connection = Connector.newConnection(config);
-
-			// display some current settings
-			System.out.println("Auth EndPoint: "+config.getAuthEndpoint());
-			System.out.println("Service EndPoint: "+config.getServiceEndpoint());
-			System.out.println("Username: "+config.getUsername());
-			System.out.println("SessionId: "+config.getSessionId());
-
-			// run the different examples
-			queryContacts();                   // Query Contacts from Salesforce
-			//	System.out.println(ContactID);
-			if(ContactID == null)
-			{
-				//System.out.println();
-				createContacts();
-				if(!(ContactID == null))
-				{
-					updateContacts();
-				}
-				else
-				{
-					System.out.println("Record has not created");
-				}
-
-			} 
-			else 
-			{
-				System.out.println("Record exists.. Deleting.."); 
-				deleteContacts();
-			}
-
-		} catch (ConnectionException e1) {
-			e1.printStackTrace();
-		}  	 
-
 		try {
 			connection.logout();
 			System.out.println("Logged out.");
 		} catch (ConnectionException ce) {
 			ce.printStackTrace();
 		}
-
-
 	}
 
-	private static void queryContacts() 
+	public static void queryContacts() 
 	{
 		System.out.println("Querying for Contact ID...");
 		try {
@@ -173,8 +68,7 @@ public class Contact_Object implements API_Variables
 		}    
 	}
 
-	// create 5 test Contacts
-	private static void createContacts() 
+	public static void createContacts() 
 	{
 		System.out.println("Creating Contacts...");
 		Contact[] records = new Contact[1];
@@ -202,8 +96,7 @@ public class Contact_Object implements API_Variables
 		} 
 	} 
 
-	// updates the 5 newly created Contacts 
-	private static void updateContacts() 
+	public static void updateContacts() 
 	{ 
 		System.out.println("Updating Contacts..."); 
 		Contact[] records = new Contact[1]; 
@@ -236,8 +129,7 @@ public class Contact_Object implements API_Variables
 		} 
 	} 
 
-	// delete the 2 newly created Contacts 
-	private static void deleteContacts() 
+	public static void deleteContacts() 
 	{ 
 		System.out.println("Deleting Contacts..."); 
 		String[] ids = new String[1]; 

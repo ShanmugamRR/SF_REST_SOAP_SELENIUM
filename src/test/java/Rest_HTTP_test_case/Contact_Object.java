@@ -31,7 +31,7 @@ public class Contact_Object implements API_Variables
 	@Test(enabled = true)
 	public void checkDuplicates() throws IOException
 	{
-		ContactId = methods.getID(baseUrl, query);
+		ContactId = methods.getID_REST(baseUrl, query);
 		System.out.println(ContactId);
 		if (ContactId.equals("No ID"))
 		{
@@ -72,7 +72,7 @@ public class Contact_Object implements API_Variables
 		if(ContactId == null || ContactId.equals("No ID"))
 		{
 			System.out.println("ID is null. Getting ID.......");
-			ContactId = methods.getID(baseUrl, query);
+			ContactId = methods.getID_REST(baseUrl, query);
 			System.out.println(ContactId);
 		} 
 		if(!(ContactId.equals("No ID")))
@@ -107,7 +107,7 @@ public class Contact_Object implements API_Variables
 		if(ContactId == null)
 		{
 			System.out.println("\nID is null. Getting ID.......");
-			ContactId = methods.getID(baseUrl, query);
+			ContactId = methods.getID_REST(baseUrl, query);
 			System.out.println(ContactId);
 		}
 		if(!(ContactId.equals("No ID")))

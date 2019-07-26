@@ -11,6 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 public class API_Methods implements API_Variables
 {
 
@@ -49,7 +50,7 @@ public class API_Methods implements API_Variables
 		
 	}
 	
-	public String  getID(String url, String query) throws IOException
+	public String  getID_REST(String url, String query) throws IOException
 	{
 		String query_c = api.getQuery(query);
 		String baseurl = url+"/query?q="+query_c;
@@ -78,4 +79,5 @@ public class API_Methods implements API_Variables
 return null;
 
 	}
+
 }

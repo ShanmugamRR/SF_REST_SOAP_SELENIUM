@@ -33,7 +33,7 @@ public class Contact_Create implements API_Variables
 	@Test(enabled = true)
 	public void Create_ContactObjects() throws IOException
 	{
-		inputs.ContactId = methods.getID(inputs.baseUrl, inputs.query);
+		inputs.ContactId = methods.getID_REST(inputs.baseUrl, inputs.query);
 		System.out.println("ContactID is:"+inputs.ContactId);
 		if (inputs.ContactId == null || inputs.ContactId.equals("No ID"))
 		{

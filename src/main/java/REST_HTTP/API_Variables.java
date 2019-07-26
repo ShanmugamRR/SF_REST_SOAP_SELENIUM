@@ -21,6 +21,7 @@ public interface API_Variables
 	//Contact Object Details
 	public static String ContactFirstName = "Test_API";
 	public static String ContactLastName = "REST_API";
+	public static String ContactLastNameSOAP = "SOAP_API";
 	public static String ContactTitle = "Shanmugam_TEST";
 	public static String ContactEmail = "shan.2408@salesforce.com";
 	public static String query = "Select id from contact where Email ='"+ContactEmail+"'";
