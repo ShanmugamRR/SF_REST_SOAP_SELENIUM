@@ -1,6 +1,7 @@
 CONFIG_PROPERTIES\Create_File_Properties.class
 REST_HTTP\API_Contact_Inputs.class
 REST_HTTP\API_Utilities.class
+SOAP_WSDL\SOAP_API_methods.class
 SELENIUM_WEBDRIVER\WebDriver_Utilities.class
 SELENIUM_WEBDRIVER\WebDriver_Varibales.class
 REST_HTTP\API_Utilities$HttpPatch.class

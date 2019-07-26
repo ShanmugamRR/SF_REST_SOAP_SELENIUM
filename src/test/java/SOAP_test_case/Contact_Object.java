@@ -22,7 +22,7 @@ public class Contact_Object implements API_Variables
 	static EnterpriseConnection connection;
 	static String ContactID;
 	API_Contact_Inputs input = new API_Contact_Inputs();
-	/*
+	
 	@BeforeTest
 	public void getConnection()
 	{
@@ -62,17 +62,17 @@ public class Contact_Object implements API_Variables
 		cont.setFirstName("Test_API");
 		cont.setLastName("SOAP_API");
 		cont.setEmail("shan.2408@salesforce.com");
-		records[1] = cont;
+		records[0] = cont;
 
 		try {
 			SaveResult[] saveResults = connection.create(records);
-			if (saveResults[1].isSuccess()) 
+			if (saveResults[0].isSuccess()) 
 			{
-				System.out.println("Successfully created record - Id: " + saveResults[1].getId());
+				System.out.println("Successfully created record - Id: " + saveResults[0].getId());
 			} else 
 			{
-				Error[] errors = saveResults[1].getErrors();
-				System.out.println("ERROR creating record: " + errors[1].getMessage()); 
+				Error[] errors = saveResults[0].getErrors();
+				System.out.println("ERROR creating record: " + errors[0].getMessage()); 
 			}
 		} catch (ConnectionException e) {
 			e.printStackTrace();
@@ -97,8 +97,9 @@ public class Contact_Object implements API_Variables
 	public void afterTest()
 	{
 
-	}*/
+	}
 
+	/*
 
 	public static void main(String[] args) {
 
@@ -269,5 +270,5 @@ public class Contact_Object implements API_Variables
 		}    
 
 	}
-
+*/
 }
