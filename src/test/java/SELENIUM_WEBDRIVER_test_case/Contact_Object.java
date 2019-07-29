@@ -44,7 +44,7 @@ public class Contact_Object implements WebDriver_Varibales,API_Variables
 	public void openBrowser() throws IOException
 	{
 		inputs.baseUrl = methods.getBaseURL();
-		inputs.ContactId = methods.getID(inputs.baseUrl, query);
+		inputs.ContactId = methods.getID_REST(inputs.baseUrl, query);
 		
 		if(!(inputs.ContactId.equals("No ID")))
 		{

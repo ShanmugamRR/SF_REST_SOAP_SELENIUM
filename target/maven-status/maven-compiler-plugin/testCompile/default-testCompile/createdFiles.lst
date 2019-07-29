@@ -1,5 +1,9 @@
 Rest_HTTP_test_case\Contact_Update.class
 Rest_HTTP_test_case\Contact_Delete.class
+SOAP_test_case\Contact_Delete.class
+SOAP_test_case\Contact_Update.class
 Rest_HTTP_test_case\Contact_Create.class
 Rest_HTTP_test_case\Contact_Object.class
+SOAP_test_case\Contact_Create.class
+SOAP_test_case\Contact_Object.class
 SELENIUM_WEBDRIVER_test_case\Contact_Object.class

@@ -35,7 +35,7 @@ public class Contact_Update implements API_Variables
 		if(inputs.ContactId == null || inputs.ContactId.equals("No ID"))
 		{
 			System.out.println("ID is null. Getting ID.......");
-			inputs.ContactId = methods.getID(inputs.baseUrl, inputs.query);
+			inputs.ContactId = methods.getID_REST(inputs.baseUrl, inputs.query);
 			System.out.println(inputs.ContactId);
 		} 
 		if(!(inputs.ContactId.equals("No ID")))
