@@ -14,8 +14,8 @@ import REST_HTTP.API_Variables;
 
 public class SOAP_API_methods implements API_Variables
 {
-	static EnterpriseConnection connection;
-	static String ContactID;
+	public static EnterpriseConnection connection;
+	public static String ContactID;
 	
 	public static void getConnection()
 	{
