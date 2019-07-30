@@ -6,9 +6,12 @@ import org.testng.annotations.Test;
 
 import com.sforce.ws.ConnectionException;
 
+import REST_HTTP.API_Contact_Inputs;
+import REST_HTTP.API_Variables;
 import SOAP_WSDL.SOAP_API_methods;
 
-public class Contact_Delete {
+public class Contact_Delete extends API_Contact_Inputs
+{
 
 	@BeforeTest
 	public void getConnection()
@@ -24,7 +27,7 @@ public class Contact_Delete {
 			if(!(SOAP_API_methods.connection == null))
 			{
 				System.out.println("Connected to SalesForce...");
-				SOAP_API_methods.queryContacts();
+				SOAP_API_methods.getID(query);
 				if(!(SOAP_API_methods.ContactID == null))
 				{
 					SOAP_API_methods.deleteContacts();
