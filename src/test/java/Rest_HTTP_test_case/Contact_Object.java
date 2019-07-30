@@ -9,11 +9,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import CONFIG_PROPERTIES.Excel_Metadata;
+import REST_HTTP.API_Contact_Inputs;
 import REST_HTTP.API_Methods;
 import REST_HTTP.API_Utilities;
 import REST_HTTP.API_Variables;
 
-public class Contact_Object implements API_Variables
+public class Contact_Object extends API_Contact_Inputs
 {
 	static String baseUrl;
 	static String ContactId ;
@@ -51,7 +54,8 @@ public class Contact_Object implements API_Variables
 		String url = baseUrl + "/sobjects/Contact/";
 		int statuscode = 201;
 		JSONObject create_contact = new JSONObject();
-		create_contact.put("FirstName",ContactFirstName);
+		//create_contact.put("FirstName",ContactFirstName);
+		create_contact.put("FirstName",Excel_Metadata.getMapData("FirstName"));
 		create_contact.put("LastName", ContactLastName);
 		create_contact.put("Email", ContactEmail);
 		HttpPost httpPost =	HTTP.getHttpPost(url);

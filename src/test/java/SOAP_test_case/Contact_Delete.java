@@ -6,10 +6,11 @@ import org.testng.annotations.Test;
 
 import com.sforce.ws.ConnectionException;
 
+import REST_HTTP.API_Contact_Inputs;
 import REST_HTTP.API_Variables;
 import SOAP_WSDL.SOAP_API_methods;
 
-public class Contact_Delete implements API_Variables
+public class Contact_Delete extends API_Contact_Inputs
 {
 
 	@BeforeTest

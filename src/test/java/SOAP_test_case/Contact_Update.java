@@ -4,10 +4,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import REST_HTTP.API_Contact_Inputs;
 import REST_HTTP.API_Variables;
 import SOAP_WSDL.SOAP_API_methods;
 
-public class Contact_Update implements API_Variables
+public class Contact_Update extends API_Contact_Inputs
 {
 
 	@BeforeTest
