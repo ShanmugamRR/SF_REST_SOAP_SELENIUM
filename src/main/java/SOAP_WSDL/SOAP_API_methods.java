@@ -46,8 +46,10 @@ public class SOAP_API_methods implements API_Variables
 			ce.printStackTrace();
 		}
 	}
+	
 
-	public static void queryContacts() 
+
+	public static void getID(String query) 
 	{
 		System.out.println("Querying for Contact ID...");
 		try {

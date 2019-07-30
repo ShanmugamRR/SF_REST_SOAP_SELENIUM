@@ -4,9 +4,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import REST_HTTP.API_Variables;
 import SOAP_WSDL.SOAP_API_methods;
 
-public class Contact_Create {
+public class Contact_Create implements API_Variables
+{
 	
 	@BeforeTest
 	public void getConnection()
@@ -22,7 +24,7 @@ public class Contact_Create {
 			if(!(SOAP_API_methods.connection == null))
 			{
 				System.out.println("Connected to SalesForce...");
-				SOAP_API_methods.queryContacts();
+				SOAP_API_methods.getID(query);
 				if(SOAP_API_methods.ContactID == null)
 				{
 					SOAP_API_methods.createContacts();

@@ -38,7 +38,7 @@ public class Contact_Object implements API_Variables
 			if(!(SOAP_API_methods.connection == null))
 			{
 				System.out.println("Connected to SalesForce...");
-				SOAP_API_methods.queryContacts();
+				SOAP_API_methods.getID(query);
 				if(SOAP_API_methods.ContactID == null)
 				{
 					create_Contact();
