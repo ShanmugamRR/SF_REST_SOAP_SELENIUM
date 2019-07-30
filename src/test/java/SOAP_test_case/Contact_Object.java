@@ -1,5 +1,7 @@
 package SOAP_test_case;
 
+import java.io.IOException;
+
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -18,7 +20,8 @@ import REST_HTTP.API_Contact_Inputs;
 import REST_HTTP.API_Variables;
 import SOAP_WSDL.SOAP_API_methods;
 
-public class Contact_Object implements API_Variables
+//public class Contact_Object implements API_Variables
+public class Contact_Object extends API_Contact_Inputs
 {
 	//API_Contact_Inputs input = new API_Contact_Inputs();
 
@@ -38,7 +41,7 @@ public class Contact_Object implements API_Variables
 			if(!(SOAP_API_methods.connection == null))
 			{
 				System.out.println("Connected to SalesForce...");
-				SOAP_API_methods.queryContacts();
+				SOAP_API_methods.getID(query);
 				if(SOAP_API_methods.ContactID == null)
 				{
 					create_Contact();
@@ -73,7 +76,7 @@ public class Contact_Object implements API_Variables
 	@Test
 	(enabled = false)
 	//(priority = 1)
-	public void create_Contact()
+	public void create_Contact() 
 	{
 		SOAP_API_methods.createContacts();
 	}

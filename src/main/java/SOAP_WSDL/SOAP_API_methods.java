@@ -1,5 +1,7 @@
 package SOAP_WSDL;
 
+import java.io.IOException;
+
 import com.sforce.soap.enterprise.Connector;
 import com.sforce.soap.enterprise.DeleteResult;
 import com.sforce.soap.enterprise.EnterpriseConnection;
@@ -10,9 +12,12 @@ import com.sforce.soap.enterprise.sobject.Contact;
 import com.sforce.ws.ConnectionException;
 import com.sforce.ws.ConnectorConfig;
 
+import CONFIG_PROPERTIES.Excel_Metadata;
+import REST_HTTP.API_Contact_Inputs;
 import REST_HTTP.API_Variables;
 
-public class SOAP_API_methods implements API_Variables
+//public class SOAP_API_methods implements API_Variables
+public class SOAP_API_methods extends API_Contact_Inputs
 {
 	public static EnterpriseConnection connection;
 	public static String ContactID;
@@ -46,8 +51,10 @@ public class SOAP_API_methods implements API_Variables
 			ce.printStackTrace();
 		}
 	}
+	
 
-	public static void queryContacts() 
+
+	public static void getID(String query) 
 	{
 		System.out.println("Querying for Contact ID...");
 		try {
@@ -70,13 +77,14 @@ public class SOAP_API_methods implements API_Variables
 
 	public static void createContacts() 
 	{
+		//String name = ;
 		System.out.println("Creating Contacts...");
 		Contact[] records = new Contact[1];
 		try {
 			Contact contact = new Contact();
-			contact.setFirstName(ContactFirstName);
-			contact.setLastName(ContactLastNameSOAP);
-			contact.setTitle(USERNAME);
+			contact.setFirstName(Excel_Metadata.getMapData("FirstName"));
+			contact.setLastName(Excel_Metadata.getMapData("LastName"));
+			contact.setTitle(ContactTitle);
 			contact.setEmail(ContactEmail);
 			records[0] = contact;
 			SaveResult[] saveResults = connection.create(records);
@@ -106,11 +114,11 @@ public class SOAP_API_methods implements API_Variables
 			if (queryResults.getSize() == 1) 
 			{
 				Contact cont = (Contact)queryResults.getRecords()[0];
-				System.out.println("Updating Id: " + cont.getId());
+				System.out.println("Updating Id: " + cont.getId()+"\t Last Name: "+cont.getLastName());
 				// modify the name of the Contact
 				cont.setLastName(cont.getLastName()+" -- UPDATED");
-				cont.setMobilePhone("456852951357");
-				cont.setPhone("7896541230");
+				cont.setMobilePhone(ContactPhone);
+				cont.setPhone(ContactPhone);
 				records[0] = cont;
 			}
 			SaveResult[] saveResults = connection.update(records);

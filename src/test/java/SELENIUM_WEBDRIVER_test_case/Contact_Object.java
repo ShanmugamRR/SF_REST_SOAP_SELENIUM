@@ -8,6 +8,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpDelete;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.UnsupportedCommandException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import REST_HTTP.API_Contact_Inputs;
 import REST_HTTP.API_Methods;
@@ -27,7 +29,7 @@ import REST_HTTP.API_Variables;
 import SELENIUM_WEBDRIVER.WebDriver_Utilities;
 import SELENIUM_WEBDRIVER.WebDriver_Varibales;
 
-public class Contact_Object implements WebDriver_Varibales,API_Variables
+public class Contact_Object extends API_Contact_Inputs
 {
 	WebDriver driver;
 	WebDriverWait Ewait;
@@ -45,7 +47,7 @@ public class Contact_Object implements WebDriver_Varibales,API_Variables
 	{
 		inputs.baseUrl = methods.getBaseURL();
 		inputs.ContactId = methods.getID_REST(inputs.baseUrl, query);
-		
+
 		if(!(inputs.ContactId.equals("No ID")))
 		{
 			int statuscode = 204;
@@ -62,14 +64,26 @@ public class Contact_Object implements WebDriver_Varibales,API_Variables
 				System.out.println("\nError......\n");
 			}
 		}
-		
-		DesiredCapabilities capabilities =  DesiredCapabilities.chrome();
+
+		/*DesiredCapabilities capabilities =  DesiredCapabilities.chrome();
 		capabilities.setCapability("username", SL_USERNAME);
 		capabilities.setCapability("accessKey", SL_ACCESS_KEY);
 		capabilities.setCapability("platform", "Windows 10");
 		capabilities.setCapability("version", "64.0");
+		try {
 		driver = new RemoteWebDriver(new URL(SL_URL), capabilities);
-		
+		} catch(UnsupportedCommandException I)
+		{
+			//I.printStackTrace();
+		}*/
+
+
+
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+
+
 		driver.get(SF_LOGINURL);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//WebDriver driver_1 =	WDU.getLogin(driver);
@@ -156,7 +170,7 @@ public class Contact_Object implements WebDriver_Varibales,API_Variables
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebDriver_Utilities.waitForPageToLoad(3000);
 	}
-	
+
 	@AfterTest
 	public void afterTest()
 	{
